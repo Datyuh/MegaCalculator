@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4 text-white">Вас приветствует МегаКалькулятор</h1>
+    <h2 class="text-white">Выберите калькулятор</h2>
+</div>
+
+<div class="container mt-5">
+    <a class="sliding-button container text-center" asp-controller="StudCalculator" asp-action="StudCalculatorView" type="button">
+        <img src="~/img/system_application_calculator_13032.png" class="mr-3" />Калькулятор шпилек
+    </a>
+    <a class="sliding-button container text-center" href="" type="button">
+        <img src="~/img/g12-calculator_97279.png" class="mr-3" />Калькулятор монтажный проушин
+    </a>
+    <a class="sliding-button container text-center" href="" type="button">Калькулятор еще чего-то там</a>
+</div>

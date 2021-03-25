@@ -1,0 +1,34 @@
+﻿@model MegaCalculator.App_Data.StudCalculator.Data.ApplicationContext
+@{
+    ViewData["Title"] = "Калькулятор шпилек";
+    Layout = "_Layout";
+}
+
+<link rel="stylesheet" href="~/css/StudCalculatorStyle/StudCalculatorStyle.css" />
+
+<div class="text-center">
+    <h1 class="display-4 text-white">Калькулятор шпилек</h1>
+</div>
+
+
+<div class="choesesGostLabel container">
+    <div class="row">
+        <div class="col-6 col-sm-4 text-white">
+            <label>Выберите ГОСТ фланцев</label><br />
+            <label>Выберите тип для ГОСТ 33259-2015</label><br />
+            <label>Выберите давление</label><br />
+            <label>Выберите исполнение</label><br />
+            <label>Выберите DN</label><br />
+        </div>
+    </div>
+</div>
+
+<div class="choesesGostComboBox container">
+    <div class="row">
+        @Html.DropDownListFor(m => m.GOSTs, ViewBag.GOST as IEnumerable<SelectListItem>)
+        @Html.DropDownListFor(m => m.GOSTs, ViewBag.ExecutionType33259 as IEnumerable<SelectListItem>)
+        @Html.DropDownListFor(m => m.Execution_All, ViewBag.ExecutionPn33259 as IEnumerable<SelectListItem>)
+        @Html.DropDownListFor(m => m.Execution_All, ViewBag.ExecGost33259 as IEnumerable<SelectListItem>)
+        @Html.DropDownListFor(m => m.Execution_All, ViewBag.ExecutionDn33259 as IEnumerable<SelectListItem>)
+    </div>
+</div>
